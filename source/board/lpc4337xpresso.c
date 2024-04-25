@@ -1,9 +1,9 @@
 /**
- * @file    frdmk32w042.c
- * @brief   board ID for the NXP FRDM-K32W042 board
+ * @file    lpc4337xpresso.c
+ * @brief   board ID for the NXP LPC4337Xpresso board
  *
  * DAPLink Interface Firmware
- * Copyright (c) 2017-2019, ARM Limited, All Rights Reserved
+ * Copyright (c) 2022, Arm Limited, All Rights Reserved
  * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -19,16 +19,17 @@
  * limitations under the License.
  */
 
-#include "target_board.h"
 #include "target_family.h"
+#include "target_board.h"
 
 const board_info_t g_board_info = {
     .info_version = kBoardInfoVersion,
-    .board_id = "0225",
-    .family_id = kNXP_KinetisK32W_FamilyID,
-    .flags = kEnablePageErase,
-    .daplink_url_name =   "PRODINFOHTM",
-    .daplink_drive_name = "K32W042",
-    .daplink_target_url = "http://www.nxp.com/frdm-k32w042",
+    .board_id = "4337",
+    .family_id = kStub_HWReset_FamilyID,
+    .daplink_url_name = "PRODINFOHTM",
+    .daplink_drive_name = "LPC4337",
+    .daplink_target_url = "https://os.mbed.com/platforms/LPCXpresso4337/",
     .target_cfg = &target_device,
+    .board_vendor = "NXP",
+    .board_name = "LPC4337Xpresso",
 };
